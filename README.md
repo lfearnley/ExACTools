@@ -1,7 +1,10 @@
 # ExACTools
-Tools for extracting information from ExAC VCF files.
+Tools for extracting information from ExAC VCF files when you need 'one variant per line' type output; some code sourced from a parser by Konrad Karczewski (@konradjk). Re-used code is attributed inline; any errors are my own.
 
-The ExAC/gnomAD VCFs store annotations in two places; at the top level of the VCF (parsed in the usual way), and in the CSQ field (LOFTEE annotations). The code supplied should give a general idea as to how to access these; as of gnomAD v0.1r2 a significant number of fields are left empty, including what looks like allocated space for ExAC frequencies and data.
+Notes
+-----
+
+The ExAC/gnomAD VCFs store annotations in two places; at the top level of the VCF (parsed in the usual way), and in the CSQ field (LOFTEE annotations). The code supplied should give a general idea as to how to access these (look at the annotations and info_fields objects in particular). As of gnomAD v0.1r2 a significant number of fields are left empty, including what looks like allocated space for ExAC frequencies and data.
 
 A brief summary of command line options follows:
 
