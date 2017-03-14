@@ -24,7 +24,7 @@ def main(args):
                 files.append(os.path.join(args.vcfdir, filename))
     elif args.vcf:
         files.append(args.vcf)
-    outputfile = open("variantdetails.txt", 'w')
+    outputfile = open(args.output, 'w')
     outputfile.write(
         "HGVSC\tENSGID\tCHROM\tPOS\tRSID\tAllele\tSIFT\tPolyPhen\tConsequence\tAFR\tAMR\tSAS\tEAS\tFIN\tNFE"),
     # gnomAD files add Ashkenazi Jewish populations; as a temporary fix, append the ASJ pop code to the lists.
@@ -143,6 +143,7 @@ if __name__ == '__main__':
                         required=False)
     # Add flags; distinguish between gnomAD/ExAC VCFs, allow selection of all variants (not just LoF/canonical).
     parser.add_argument('--gnomad', dest='gnomad', action='store_true', help='Use this flag to process gnomAD data')
+    parser.add_argument('--output', '-o', help='Output file destination', required=True)
     parser.add_argument('--allvars', dest='allvars', action='store_true',
                         help='Use this flag to process all variants, not only HC LoFs.')
     parser.add_argument('--noncanonical', dest='noncanonical', action='store_true',

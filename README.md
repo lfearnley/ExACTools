@@ -15,6 +15,11 @@ Input files (must specify at least one of these flags):
 
 ```--vcfdir <path>``` : a directory containing multiple VCFs (e.g. the genomes directory where one chromosome = one VCF); files may be gzipped, code (should) also work when there is a mixture of gzipped and uncompressed text.
 
+Output file destination (required):
+-----------------------------------
+
+```--output <path``` : a path to the output file (specifying file name).
+
 Flags:
 ------
 
